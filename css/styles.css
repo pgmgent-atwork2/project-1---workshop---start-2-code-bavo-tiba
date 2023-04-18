@@ -1,0 +1,18 @@
+body {
+    background-color: wheat;
+}
+
+.row {
+    margin-top: 2rem;
+  text-align: center;
+  
+}
+
+.card {
+    margin-top: 1rem;
+  display: inline-block;
+  width: 100PX;
+  height: 100PX;
+  background-color: gray;
+ 
+}
