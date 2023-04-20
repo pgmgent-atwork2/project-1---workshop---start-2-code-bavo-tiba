@@ -97,13 +97,55 @@
             </div>
         </li>
 
-       </ol>
-     </div>
+    </ol>
+    </div>
 
-     <div class="step-two">
+    <div class="step-two">
         <h1>STAP 3 - INTERACTIVITEIT MET JAVASCRIPT</h1>
-     </div>
-
+        <h2>3.1 kaart tonen</h2>
+        <p>We halen alle kaart elementen op met querySelectorAll en voegen wat variabelen toe die we later gaan nodig hebben.
+            ook voegen we met een forEach aan elke kaart een EventListener die kijkt of er geklikt wordt op de kaart.
+        </p>
+        <div class="step-img-one">
+            <img src="../project-1---workshop---start-2-code-bavo-tiba/img/Schermafbeelding 2023-04-20 123744.png" alt="">
+        </div>
+        <p>Wanneer er op de kaart geklikt wordt moet er een show class toegevoegd worden aan die kaart.
+            we kijken ook of de kaart onder de juiste omstandigheden is aangeklikt
+            <ul>
+                <li>wanneer er 2 kaarten zijn geklikt gaan we niet verder</li>
+                <li>wanneer de kaart al gevonden is gaan we niet verder</li>
+                <li>wanneer de kaart al open ligt gaan we niet verder</li>
+            </ul>
+            als dat allemaal gebeurd is slaan we de kaart op in zijn variable en kijken we of het de eerste of tweede aangeklikte kaart is, wanneer het de tweede is gaan we kijken of de kaarten gelijk zijn.
+        </p>
+        <div class="step-img-one">
+            <img src="../project-1---workshop---start-2-code-bavo-tiba/img/Schermafbeelding 2023-04-20 123812.png" alt="">
+        </div>
+        <h2>3.2 kaart controleren</h2>
+        <p>Hier controleren we de kleuren van de kaart die opgeslaan is in de dataset van het element als de kaarten juist zijn gaan we die vastzetten als ze niet juist zijn draaien we ze terug om.</p>
+        <div class="step-img-one">
+            <img src="../project-1---workshop---start-2-code-bavo-tiba/img/Schermafbeelding 2023-04-20 123835.png" alt="">
+        </div>
+        <h2>3.3 kaart vastzetten</h2>
+        <p>voor het vastzetten van de kaarten gebruiken we een nieuwe class die "done" noemt hierdoor zal die altijd zichtbaar blijven.</p>
+        <div class="step-img-one">
+            <img src="../project-1---workshop---start-2-code-bavo-tiba/img/Schermafbeelding 2023-04-20 123906.png" alt="">
+        </div>
+        <h2>3.4 kaart resetten</h2>
+        <p>Het restten van de kaarten is met een delay zodat de speler tijd heeft om de foute kaarten te bekijken.
+            het bord wordt eerst vastgezet zodat de speler niet meer dan 2 kaarten kan omdraaien.
+            na even te wachten zal de class "show" verwijderd worden zodat de kaarten terug verdwijnen, zal het bord terug klikbaar worden en worden de variable van de kaarten terug op null gezet.
+        </p>
+        <div class="step-img-one">
+            <img src="../project-1---workshop---start-2-code-bavo-tiba/img/Schermafbeelding 2023-04-20 124022.png" alt="">
+        </div>
+        <h2>3.5 kaarten random plaats geven</h2>
+        <p>We werken met 16 kaarten in een flex wrap die geen order hebben dus als we met Math.random een random getal geven tussen 0 en 16 zullen de kaarten bij het herladen elke keer een andere plaats hebben.
+            kaarten zullen soms hetzelfde nummer krijgen maar maakt voor de css niet zoveel uit en zal die dan naast elkaar zetten.
+        </p>
+        <div class="step-img-one">
+            <img src="../project-1---workshop---start-2-code-bavo-tiba/img/Schermafbeelding 2023-04-20 124039.png" alt="">
+        </div>
     </div>
     
 </body>
