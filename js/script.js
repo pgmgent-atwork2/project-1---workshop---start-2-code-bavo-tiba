@@ -8,10 +8,8 @@ let lock = false;
 cards.forEach((card) => card.addEventListener("click", showCard));
 
 function showCard() {
-  // when there are 2 cards clicked return so no more cards can be clicked
-  if (lock || this.classList.contains("done")) return;
-  // check if user doesn't click same card twice
-  if (this === firstCard) return;
+  // when there are 2 cards clicked or the card is already done or if user clicks same card twice return so no more cards can be clicked
+  if (lock || this.classList.contains("done") || this === firstCard) return;
   // when card is clicked show class is added
   this.classList.add("show");
 
