@@ -2,13 +2,16 @@ body {
   background-color: wheat;
 }
 
-.row {
-  margin-top: 2rem;
-  text-align: center;
+.game {
+  padding-top: 10rem;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 430px;
 }
 
 .card {
-  margin-top: 1rem;
   display: inline-block;
   width: 100PX;
   height: 100PX;

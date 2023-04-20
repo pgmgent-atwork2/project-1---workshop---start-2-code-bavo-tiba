@@ -1,7 +1,8 @@
 const cards = document.querySelectorAll(".card");
 
 let clickedCard = false;
-let firstCard, secondCard;
+let firstCard;
+let secondCard;
 let lock = false;
 
 cards.forEach((card) => card.addEventListener("click", showCard));
@@ -65,7 +66,11 @@ function resetCards() {
   }, 1500);
 }
 
-
-// clicking same card twice
-
-// make the cards random
+(
+  function randomDeck() {
+  // give random style position to card so cards are random every reload
+  cards.forEach((card) => {
+    let randomPos = Math.floor(Math.random() * 16);
+    card.style.order = randomPos;
+  })
+})();
