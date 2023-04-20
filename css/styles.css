@@ -14,3 +14,35 @@ body {
   height: 100PX;
   background-color: gray;
 }
+
+.show.blue, .done.blue{
+  background-color: blue;
+}
+
+.show.green, .done.green{
+  background-color: green;
+}
+
+.show.red, .done.red{
+  background-color: red;
+}
+
+.show.orange, .done.orange{
+  background-color: orange;
+}
+
+.show.pink, .done.pink{
+  background-color: pink;
+}
+
+.show.yellow, .done.yellow{
+  background-color: yellow;
+}
+
+.show.brown, .done.brown{
+  background-color: brown;
+}
+
+.show.teal, .done.teal{
+  background-color: teal;
+}
