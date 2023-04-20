@@ -1,18 +1,16 @@
 body {
-    background-color: wheat;
+  background-color: wheat;
 }
 
 .row {
-    margin-top: 2rem;
+  margin-top: 2rem;
   text-align: center;
-  
 }
 
 .card {
-    margin-top: 1rem;
+  margin-top: 1rem;
   display: inline-block;
   width: 100PX;
   height: 100PX;
   background-color: gray;
- 
 }

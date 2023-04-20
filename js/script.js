@@ -54,4 +54,8 @@ function resetCards() {
 
 // clicking same card twice
 
+<<<<<<< HEAD
 // make the cards random
+=======
+// make the cards random
+>>>>>>> b92e6d0d3001110c8392c0bc6e17943aa09041dc
