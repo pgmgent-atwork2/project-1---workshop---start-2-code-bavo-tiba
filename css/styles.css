@@ -2,6 +2,18 @@ body {
   background-color: wheat;
 } 
 
+.header {
+  margin-top: 2rem;
+  text-align: center;
+  background-color:rgb(0, 0, 0) ;
+  color: white;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-top-left-radius: 2rem;
+  font-size: 1.10rem;
+}
+
 .game {
   padding-top: 10rem;
   margin: auto;
@@ -16,6 +28,43 @@ body {
   width: 100PX;
   height: 100PX;
   background-color: gray;
+}
+
+button {
+  margin-left: 41rem;
+  margin-top: 4rem;
+  width: 11rem;
+  height: 3rem;
+  font-size: 1.25rem;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  background-color: wheat;
+}
+
+.date {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 1.25rem;
+}
+
+.tutorial {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+  font-size: 1.50rem;
+  background-color: rgb(201, 201, 201);
+  text-decoration: none;  
+}
+
+.tutorial  p  {
+  color: black;
+}
+
+.tutorial  a {
+  text-decoration: none;
 }
 
 .show.blue, .done.blue{
