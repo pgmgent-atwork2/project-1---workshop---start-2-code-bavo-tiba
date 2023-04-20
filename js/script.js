@@ -9,6 +9,8 @@ cards.forEach((card) => card.addEventListener("click", showCard));
 function showCard() {
   // when there are 2 cards clicked return so no more cards can be clicked
   if (lock) return;
+  // check if user doesn't click same card twice
+  if (this === firstCard) return;
   // when card is clicked show class is added or removed
   this.classList.toggle("show");
   console.log(lock);
@@ -57,10 +59,12 @@ function resetCards() {
     
     // unlock the board after timeout
     lock = false;
+    // reset cards to null
+    firstCard = null;
+    secondCard = null;
   }, 1500);
 }
 
-// todo remove ability to click more than two cards
 
 // clicking same card twice
 
