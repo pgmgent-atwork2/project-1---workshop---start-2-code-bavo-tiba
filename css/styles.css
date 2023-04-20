@@ -2,6 +2,7 @@ body {
   background-color: wheat;
 } 
 
+<<<<<<< HEAD
 .header {
   margin-top: 2rem;
   text-align: center;
@@ -19,6 +20,10 @@ body {
 
 .game {
   padding-top: 6rem;
+=======
+.game {
+  padding-top: 10rem;
+>>>>>>> eb2fe02b7acc4fb82c406ed0cec3ae201b720d1a
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -63,6 +68,7 @@ body {
 
 .show.teal, .done.teal{
   background-color: teal;
+<<<<<<< HEAD
 }
 
 button {
@@ -101,4 +107,6 @@ background-color: wheat;
 
 .tutorial  a {
   text-decoration: none;
+=======
+>>>>>>> eb2fe02b7acc4fb82c406ed0cec3ae201b720d1a
 }
