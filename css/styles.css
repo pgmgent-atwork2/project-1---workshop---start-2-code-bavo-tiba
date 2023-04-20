@@ -28,6 +28,7 @@ body {
   width: 100PX;
   height: 100PX;
   background-color: gray;
+  cursor: pointer;
 }
 
 button {
@@ -40,6 +41,7 @@ button {
   border-bottom-right-radius: 2rem;
   border-bottom-left-radius: 2rem;
   background-color: wheat;
+  cursor: pointer;
 }
 
 .date {
