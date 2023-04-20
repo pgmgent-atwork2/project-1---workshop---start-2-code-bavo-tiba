@@ -62,4 +62,8 @@ function resetCards() {
     let randomPos = Math.floor(Math.random() * 16);
     card.style.order = randomPos;
   });
+<<<<<<< HEAD
 })();
+=======
+})();
+>>>>>>> eb2fe02b7acc4fb82c406ed0cec3ae201b720d1a
