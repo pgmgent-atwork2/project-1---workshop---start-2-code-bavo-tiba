@@ -1,18 +1,20 @@
 const cards = document.querySelectorAll(".card");
 
 let clickedCard = false;
-let firstCard, secondCard;
+let firstCard;
+let secondCard;
+let lock = false;
 
 cards.forEach((card) => card.addEventListener("click", showCard));
 
 function showCard() {
-  // when card is clicked show class is added or removed
-  this.classList.toggle("show");
-
-  console.log(this.getAttribute("data-color"));
+  // when there are 2 cards clicked or the card is already done or if user clicks same card twice return so no more cards can be clicked
+  if (lock || this.classList.contains("done") || this === firstCard) return;
+  // when card is clicked show class is added
+  this.classList.add("show");
 
   if (!clickedCard) {
-    // if its the first card that is clicked save it to firstcard
+    // if its the first card that is clicked save it to firstcard and end function
     clickedCard = true;
     firstCard = this;
     return;
@@ -27,35 +29,37 @@ function showCard() {
 
 function checkCards() {
   // check if both cards are same color if not reset cards
-  if (
-    firstCard.getAttribute("data-color") ===
-    secondCard.getAttribute("data-color")
-  ) {
+  if (secondCard.matches(`[data-color="${firstCard.dataset.color}"]`)) {
     disableCards();
   }
   resetCards();
 }
 
 function disableCards() {
-  // if both correct cards are clicked disable eventListener
-  firstCard.removeEventListener("click", showCard);
-  secondCard.removeEventListener("click", showCard);
+  // if both cards are correct add done class
+  firstCard.classList.add("done");
+  secondCard.classList.add("done");
 }
 
 function resetCards() {
+  // lock the board when 2 cards are clicked
+  lock = true;
   // remove show from cards after small timeout
   setTimeout(() => {
-    firstCard.classList.toggle("show");
-    secondCard.classList.toggle("show");
-  }, 1500);
+    firstCard.classList.remove("show");
+    secondCard.classList.remove("show");
+    // unlock the board after timeout
+    lock = false;
+    // reset cards to null
+    firstCard = null;
+    secondCard = null;
+  }, 1000);
 }
 
-// todo ability to click more than two cards
-
-// clicking same card twice
-
-<<<<<<< HEAD
-// make the cards random
-=======
-// make the cards random
->>>>>>> b92e6d0d3001110c8392c0bc6e17943aa09041dc
+(function randomDeck() {
+  // give random style position to card so cards are random every reload
+  cards.forEach((card) => {
+    let randomPos = Math.floor(Math.random() * 16);
+    card.style.order = randomPos;
+  });
+})();

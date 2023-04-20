@@ -1,16 +1,104 @@
 body {
   background-color: wheat;
-}
+} 
 
-.row {
+.header {
   margin-top: 2rem;
   text-align: center;
+  background-color:rgb(0, 0, 0) ;
+  color: white;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-top-left-radius: 2rem;
+}
+
+.header {
+  font-size: 1.10rem;
+}
+
+.game {
+  padding-top: 6rem;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 430px;
 }
 
 .card {
-  margin-top: 1rem;
   display: inline-block;
   width: 100PX;
   height: 100PX;
   background-color: gray;
+}
+
+.show.blue, .done.blue{
+  background-color: blue;
+}
+
+.show.green, .done.green{
+  background-color: green;
+}
+
+.show.red, .done.red{
+  background-color: red;
+}
+
+.show.orange, .done.orange{
+  background-color: orange;
+}
+
+.show.pink, .done.pink{
+  background-color: pink;
+}
+
+.show.yellow, .done.yellow{
+  background-color: yellow;
+}
+
+.show.brown, .done.brown{
+  background-color: brown;
+}
+
+.show.teal, .done.teal{
+  background-color: teal;
+}
+
+button {
+  margin-left: 41rem;
+  margin-top: 4rem;
+  width: 11rem;
+  height: 3rem;
+  font-size: 1.25rem;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+background-color: wheat;
+}
+
+.date {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 1.25rem;
+}
+
+.tutorial {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+  font-size: 1.50rem;
+  background-color: rgb(201, 201, 201);
+  text-decoration: none;
+  
+}
+
+.tutorial  p  {
+  color: black;
+}
+
+.tutorial  a {
+  text-decoration: none;
 }

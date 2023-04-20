@@ -2,6 +2,32 @@ body {
     background-color: rgb(228, 199, 255);
 }
 
+.header-turial  {
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.home {
+    margin-top: 5rem;
+    width: 10rem;
+    height: 4rem;
+    padding-top: 0.50rem;
+    margin-left: 3rem;
+    font-size: 1.10rem;
+    text-align: center;
+    background-color: rgb(224, 191, 255)
+}
+
+.home p {
+    color: black;
+    font-size: 1.30rem;
+}
+
+.home a {
+    text-decoration: none;
+}
+
 .start{
     text-align: center;
     margin-top: 3rem;
