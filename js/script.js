@@ -9,16 +9,14 @@ cards.forEach((card) => card.addEventListener("click", showCard));
 
 function showCard() {
   // when there are 2 cards clicked return so no more cards can be clicked
-  if (lock) return;
+  if (lock || this.classList.contains("done")) return;
   // check if user doesn't click same card twice
   if (this === firstCard) return;
-  // when card is clicked show class is added or removed
-  this.classList.toggle("show");
-  console.log(lock);
-  console.log(this.getAttribute("data-color"));
+  // when card is clicked show class is added
+  this.classList.add("show");
 
   if (!clickedCard) {
-    // if its the first card that is clicked save it to firstcard
+    // if its the first card that is clicked save it to firstcard and end function
     clickedCard = true;
     firstCard = this;
     return;
@@ -33,19 +31,14 @@ function showCard() {
 
 function checkCards() {
   // check if both cards are same color if not reset cards
-  if (
-    firstCard.getAttribute("data-color") ===
-    secondCard.getAttribute("data-color")
-  ) {
+  if (secondCard.matches(`[data-color="${firstCard.dataset.color}"]`)) {
     disableCards();
   }
   resetCards();
 }
 
 function disableCards() {
-  // if both correct cards are clicked disable eventListener
-  firstCard.removeEventListener("click", showCard);
-  secondCard.removeEventListener("click", showCard);
+  // if both cards are correct add done class
   firstCard.classList.add("done");
   secondCard.classList.add("done");
 }
@@ -57,20 +50,18 @@ function resetCards() {
   setTimeout(() => {
     firstCard.classList.remove("show");
     secondCard.classList.remove("show");
-    
     // unlock the board after timeout
     lock = false;
     // reset cards to null
     firstCard = null;
     secondCard = null;
-  }, 1500);
+  }, 1000);
 }
 
-(
-  function randomDeck() {
+(function randomDeck() {
   // give random style position to card so cards are random every reload
   cards.forEach((card) => {
     let randomPos = Math.floor(Math.random() * 16);
     card.style.order = randomPos;
-  })
+  });
 })();
